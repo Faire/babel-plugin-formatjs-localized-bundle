@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`babel-plugin-formatjs-localized-bundle Compiles when there is no callback and no translations to match the IDs 1`] = `
+"var x = /*#__PURE__*/React.createElement(\\"div\\", null, /*#__PURE__*/React.createElement(LocalMsg, {
+  id: \\"AST\\",
+  defaultMessage: \\"Default message 1\\"
+}), /*#__PURE__*/React.createElement(LocalMsg, {
+  id: \\"FIRST_ID\\",
+  defaultMessage: \\"Default message 1\\"
+}), /*#__PURE__*/React.createElement(LocalMsg, {
+  id: \\"NEXT_ID\\",
+  defaultMessage: \\"Default message {variable} 2\\",
+  values: {
+    variable: \\"22\\"
+  }
+}), /*#__PURE__*/React.createElement(LocalMsg, {
+  values: {
+    variable: \\"33\\"
+  },
+  defaultMessage: \\"Default message {variable} 3\\"
+}), /*#__PURE__*/React.createElement(FormattedMessage, {
+  defaultMessage: \\"Default message 1\\"
+}), /*#__PURE__*/React.createElement(FormattedMessage, {
+  defaultMessage: \\"Default message {variable} 2\\",
+  values: {
+    variable: \\"22\\"
+  }
+}), /*#__PURE__*/React.createElement(FormattedMessage, {
+  id: \\"FIRST_ID_FORMATTED\\",
+  values: {
+    variable: \\"33\\"
+  },
+  defaultMessage: \\"Default message {variable} 3\\"
+}), localize({
+  defaultMessage: \\"Default message 4\\",
+  id: \\"FIRST_ID_LOCALIZE\\"
+}), localize({
+  defaultMessage: \\"Default message {variable} 5\\",
+  id: \\"NEXT_ID_LOCALIZE\\"
+}, {
+  variable: \\"55\\"
+}), localize({
+  defaultMessage: \\"Default message {variable} 6\\",
+  description: \\"A\\"
+}, {
+  variable: \\"66\\"
+}), localize({
+  description: \\"B\\",
+  defaultMessage: \\"Default message {variable} 7\\"
+}, {
+  variable: \\"77\\"
+}), LocalizationStore.get().intl.formatMessage({
+  description: \\"B\\",
+  defaultMessage: \\"Default message {variable} 7\\",
+  id: \\"FIRST_ID_INTL\\"
+}, {
+  variable: \\"77\\"
+}));"
+`;
+
+exports[`babel-plugin-formatjs-localized-bundle exits gracefully when there are no translations 1`] = `
+"var x = /*#__PURE__*/React.createElement(\\"div\\", null, /*#__PURE__*/React.createElement(LocalMsg, {
+  id: \\"AST\\",
+  defaultMessage: \\"Default message 1\\"
+}), /*#__PURE__*/React.createElement(LocalMsg, {
+  id: \\"FIRST_ID\\",
+  defaultMessage: \\"Default message 1\\"
+}), /*#__PURE__*/React.createElement(LocalMsg, {
+  id: \\"NEXT_ID\\",
+  defaultMessage: \\"Default message {variable} 2\\",
+  values: {
+    variable: \\"22\\"
+  }
+}), /*#__PURE__*/React.createElement(LocalMsg, {
+  values: {
+    variable: \\"33\\"
+  },
+  defaultMessage: \\"Default message {variable} 3\\"
+}), /*#__PURE__*/React.createElement(FormattedMessage, {
+  defaultMessage: \\"Default message 1\\"
+}), /*#__PURE__*/React.createElement(FormattedMessage, {
+  defaultMessage: \\"Default message {variable} 2\\",
+  values: {
+    variable: \\"22\\"
+  }
+}), /*#__PURE__*/React.createElement(FormattedMessage, {
+  id: \\"FIRST_ID_FORMATTED\\",
+  values: {
+    variable: \\"33\\"
+  },
+  defaultMessage: \\"Default message {variable} 3\\"
+}), localize({
+  defaultMessage: \\"Default message 4\\",
+  id: \\"FIRST_ID_LOCALIZE\\"
+}), localize({
+  defaultMessage: \\"Default message {variable} 5\\",
+  id: \\"NEXT_ID_LOCALIZE\\"
+}, {
+  variable: \\"55\\"
+}), localize({
+  defaultMessage: \\"Default message {variable} 6\\",
+  description: \\"A\\"
+}, {
+  variable: \\"66\\"
+}), localize({
+  description: \\"B\\",
+  defaultMessage: \\"Default message {variable} 7\\"
+}, {
+  variable: \\"77\\"
+}), LocalizationStore.get().intl.formatMessage({
+  description: \\"B\\",
+  defaultMessage: \\"Default message {variable} 7\\",
+  id: \\"FIRST_ID_INTL\\"
+}, {
+  variable: \\"77\\"
+}));"
+`;
+
+exports[`babel-plugin-formatjs-localized-bundle transformers code that has been compiled by babel 1`] = `
+"var StubLocalizationComponent = function StubLocalizationComponent() {
+  return /*#__PURE__*/_react[\\"default\\"].createElement(_react[\\"default\\"].Fragment, null, /*#__PURE__*/_react[\\"default\\"].createElement(LocalMsg, {
+    id: \\"0dBLIo\\",
+    defaultMessage: \\"[NON-IMPERATIVE]\\"
+  }), /*#__PURE__*/_react[\\"default\\"].createElement(LocalMsg, {
+    id: \\"AtqwNy\\",
+    defaultMessage: \\"[IMPERATIVE] with var\\",
+    values: {
+      _var: 1
+    }
+  }));
+};
+var StubImperativeLocalizationComponent = function StubImperativeLocalizationComponent() {
+  return /*#__PURE__*/_react[\\"default\\"].createElement(_react[\\"default\\"].Fragment, null, (0, _localizationWrappers.localize)({
+    id: \\"uohyBB\\",
+    defaultMessage: \\"[IMPERATIVE]\\"
+  }), (0, _localizationWrappers.localize)({
+    id: \\"qXVQAv\\",
+    defaultMessage: \\"[NON-IMPERATIVE] with var\\"
+  }, {
+    _var: 1
+  }));
+};"
+`;
+
+exports[`babel-plugin-formatjs-localized-bundle transpiles all types of messages 1`] = `
+"var x = /*#__PURE__*/React.createElement(\\"div\\", null, /*#__PURE__*/React.createElement(LocalMsg, {
+  id: \\"AST\\",
+  defaultMessage: [{
+    \\"type\\": 0,
+    \\"value\\": \\"Commencé à \\"
+  }, {
+    \\"type\\": 1,
+    \\"value\\": \\"firstYear\\"
+  }, {
+    \\"type\\": 0,
+    \\"value\\": \\"-\\"
+  }, {
+    \\"type\\": 1,
+    \\"value\\": \\"secondYear\\"
+  }]
+}), /*#__PURE__*/React.createElement(LocalMsg, {
+  id: \\"FIRST_ID\\",
+  defaultMessage: \\"NEW_TEXT\\"
+}), /*#__PURE__*/React.createElement(LocalMsg, {
+  id: \\"NEXT_ID\\",
+  defaultMessage: \\"MORE_NEW_TEXT\\",
+  values: {
+    variable: \\"22\\"
+  }
+}), /*#__PURE__*/React.createElement(LocalMsg, {
+  values: {
+    variable: \\"33\\"
+  },
+  defaultMessage: \\"Default message {variable} 3\\"
+}), /*#__PURE__*/React.createElement(FormattedMessage, {
+  defaultMessage: \\"Default message 1\\"
+}), /*#__PURE__*/React.createElement(FormattedMessage, {
+  defaultMessage: \\"Default message {variable} 2\\",
+  values: {
+    variable: \\"22\\"
+  }
+}), /*#__PURE__*/React.createElement(FormattedMessage, {
+  id: \\"FIRST_ID_FORMATTED\\",
+  values: {
+    variable: \\"33\\"
+  },
+  defaultMessage: \\"Default message {variable} 3\\"
+}), localize({
+  defaultMessage: \\"NEW_TEXT_LOCALIZE\\",
+  id: \\"FIRST_ID_LOCALIZE\\"
+}), localize({
+  defaultMessage: \\"MORE_NEW_TEXT_LOCALIZE\\",
+  id: \\"NEXT_ID_LOCALIZE\\"
+}, {
+  variable: \\"55\\"
+}), localize({
+  defaultMessage: \\"Default message {variable} 6\\",
+  description: \\"A\\"
+}, {
+  variable: \\"66\\"
+}), localize({
+  description: \\"B\\",
+  defaultMessage: \\"Default message {variable} 7\\"
+}, {
+  variable: \\"77\\"
+}), LocalizationStore.get().intl.formatMessage({
+  description: \\"B\\",
+  defaultMessage: \\"NEW_TEXT_INTL\\",
+  id: \\"FIRST_ID_INTL\\"
+}, {
+  variable: \\"77\\"
+}));"
+`;
+
+exports[`babel-plugin-formatjs-localized-bundle transpiles all types of messages from messages path 1`] = `
+"var x = /*#__PURE__*/React.createElement(\\"div\\", null, /*#__PURE__*/React.createElement(LocalMsg, {
+  id: \\"AST\\",
+  defaultMessage: [{
+    \\"type\\": 0,
+    \\"value\\": \\"Commencé à \\"
+  }, {
+    \\"type\\": 1,
+    \\"value\\": \\"firstYear\\"
+  }, {
+    \\"type\\": 0,
+    \\"value\\": \\"-\\"
+  }, {
+    \\"type\\": 1,
+    \\"value\\": \\"secondYear\\"
+  }]
+}), /*#__PURE__*/React.createElement(LocalMsg, {
+  id: \\"FIRST_ID\\",
+  defaultMessage: \\"NEW_TEXT\\"
+}), /*#__PURE__*/React.createElement(LocalMsg, {
+  id: \\"NEXT_ID\\",
+  defaultMessage: \\"MORE_NEW_TEXT\\",
+  values: {
+    variable: \\"22\\"
+  }
+}), /*#__PURE__*/React.createElement(LocalMsg, {
+  values: {
+    variable: \\"33\\"
+  },
+  defaultMessage: \\"Default message {variable} 3\\"
+}), /*#__PURE__*/React.createElement(FormattedMessage, {
+  defaultMessage: \\"Default message 1\\"
+}), /*#__PURE__*/React.createElement(FormattedMessage, {
+  defaultMessage: \\"Default message {variable} 2\\",
+  values: {
+    variable: \\"22\\"
+  }
+}), /*#__PURE__*/React.createElement(FormattedMessage, {
+  id: \\"FIRST_ID_FORMATTED\\",
+  values: {
+    variable: \\"33\\"
+  },
+  defaultMessage: \\"Default message {variable} 3\\"
+}), localize({
+  defaultMessage: \\"NEW_TEXT_LOCALIZE\\",
+  id: \\"FIRST_ID_LOCALIZE\\"
+}), localize({
+  defaultMessage: \\"MORE_NEW_TEXT_LOCALIZE\\",
+  id: \\"NEXT_ID_LOCALIZE\\"
+}, {
+  variable: \\"55\\"
+}), localize({
+  defaultMessage: \\"Default message {variable} 6\\",
+  description: \\"A\\"
+}, {
+  variable: \\"66\\"
+}), localize({
+  description: \\"B\\",
+  defaultMessage: \\"Default message {variable} 7\\"
+}, {
+  variable: \\"77\\"
+}), LocalizationStore.get().intl.formatMessage({
+  description: \\"B\\",
+  defaultMessage: \\"NEW_TEXT_INTL\\",
+  id: \\"FIRST_ID_INTL\\"
+}, {
+  variable: \\"77\\"
+}));"
+`;
