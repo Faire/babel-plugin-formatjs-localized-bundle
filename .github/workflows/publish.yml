@@ -30,7 +30,7 @@ jobs:
           yarn install --frozen-lockfile
           yarn build
       - name: Run semantic release (release + bump version)
-        run: npx semantic-release
+        run: yarn release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
