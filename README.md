@@ -9,7 +9,6 @@ A babel plugin to inline translations into compiled formatjs code.
    <ul>
       <li><a href="#getting-started">Getting Started</a></li>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#usage">Usage</a></li>
         <li><a href="#options">Options</a></li>
       </ul>
