@@ -9,7 +9,6 @@ A babel plugin to inline translations into compiled formatjs code.
    <ul>
       <li><a href="#getting-started">Getting Started</a></li>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#usage">Usage</a></li>
         <li><a href="#options">Options</a></li>
       </ul>
@@ -19,19 +18,11 @@ A babel plugin to inline translations into compiled formatjs code.
 
 ## Getting Started
 
-### Prerequisites
+### Installation
 
-`@faire/babel-plugin-formatjs-localized-bundle` is hosted on :octocat:[GitHub Packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package). To configure npm to download @faire packages from GitHub Packages registry you need to
-
-1. Create a [personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) with the `read:packages` scope
-2. Use the command below to add the personal access token to ~/.npmrc
-   ```
-   echo "//npm.pkg.github.com/:_authToken=YOUR_TOKEN" >> ~/.npmrc
-   ```
-3. Use the command below to configure npm to download @faire packages from GitHub Packages registry
-   ```
-   npm config set @faire:registry https://npm.pkg.github.com
-   ```
+```
+npm install @faire/babel-plugin-formatjs-localized-bundle
+```
 
 ### Usage
 

@@ -1,0 +1,36 @@
+name: Publish @faire/babel-plugin-formatjs-localized-bundle
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  runCI:
+    uses: ./.github/workflows/pr-checks.yml
+  build-and-publish:
+    needs: runCI
+    name: Build and publish the package
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+
+      - name: Configure Github credentials
+        run: |
+          git config --global user.name "Github"
+          git config --global user.email "github@faire.com"
+      - run: |
+          yarn install --frozen-lockfile
+          yarn build
+      - name: Run semantic release (release + bump version)
+        run: yarn release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
