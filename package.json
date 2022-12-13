@@ -1,17 +1,18 @@
 {
   "name": "@faire/babel-plugin-formatjs-localized-bundle",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "dist/index.js",
   "author": "Paul Salvatore <paul@faire.com>",
   "license": "MIT",
   "description": "Inline translations into formatjs code at compile time",
   "bin": "dist/index.js",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Faire/babel-plugin-formatjs-localized-bundle.git"
+    "url": "git+https://github.com/Faire/babel-plugin-formatjs-localized-bundle.git"
   },
   "files": [
     "dist/"
