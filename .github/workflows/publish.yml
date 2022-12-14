@@ -31,7 +31,6 @@ jobs:
           yarn build
       - name: Run semantic release (release + bump version)
         run: |
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
           yarn release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
