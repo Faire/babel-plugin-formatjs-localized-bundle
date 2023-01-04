@@ -1,7 +1,7 @@
 {
   "name": "@faire/babel-plugin-formatjs-localized-bundle",
-  "version": "2.1.2",
-  "main": "dist/index.js",
+  "version": "2.1.3",
+  "main": "dist/src/index.js",
   "author": "Paul Salvatore <paul@faire.com>",
   "license": "MIT",
   "description": "Inline translations into formatjs code at compile time",
