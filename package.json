@@ -1,11 +1,11 @@
 {
   "name": "@faire/babel-plugin-formatjs-localized-bundle",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "main": "dist/src/index.js",
   "author": "Paul Salvatore <paul@faire.com>",
   "license": "MIT",
   "description": "Inline translations into formatjs code at compile time",
-  "bin": "dist/index.js",
+  "bin": "dist/src/index.js",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
