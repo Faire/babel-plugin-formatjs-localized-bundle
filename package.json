@@ -1,6 +1,6 @@
 {
   "name": "@faire/babel-plugin-formatjs-localized-bundle",
-  "version": "2.1.5",
+  "version": "2.2.0",
   "main": "dist/src/index.js",
   "author": "Paul Salvatore <paul@faire.com>",
   "license": "MIT",
@@ -57,5 +57,6 @@
       "@semantic-release/npm",
       "@semantic-release/github"
     ]
-  }
+  },
+  "dependencies": {}
 }
