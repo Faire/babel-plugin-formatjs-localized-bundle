@@ -241,4 +241,51 @@ describe("babel-plugin-formatjs-localized-bundle", () => {
       ).code
     ).toMatchSnapshot();
   });
+
+  test("transformers code that has been compiled by nextjs", function () {
+    expect(
+      transformFileSync(
+        path.resolve(
+          __dirname,
+          "..",
+          "__fixtures__",
+          "pre-compiled-nextjs",
+          "code.js"
+        ),
+        {
+          presets: [
+            [
+              "@babel/preset-env",
+              {
+                targets: {
+                  node: "14",
+                  esmodules: true,
+                },
+                modules: false,
+                useBuiltIns: false,
+                ignoreBrowserslistConfig: true,
+              },
+            ],
+            "@babel/preset-react",
+          ],
+          plugins: [
+            [
+              plugin,
+              {
+                translatedMessages: require(path.resolve(
+                  __dirname,
+                  "..",
+                  "__fixtures__",
+                  "pre-compiled-nextjs",
+                  "mockMessages.js"
+                )),
+                additionalComponentNames: ["LocalMsg"],
+                additionalFunctionNames: ["localize"],
+              },
+            ],
+          ],
+        }
+      ).code
+    ).toMatchSnapshot();
+  });
 });
