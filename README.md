@@ -66,14 +66,6 @@ Ex.
 }
 ```
 
-#### additionalFunctionNames (Optional)
-
-Similar to [@formatjs/ts-transformer](https://formatjs.io/docs/tooling/ts-transformer#additionalfunctionnames), this allows you to specify additional function names to check besides `formatMessage`.
-
-#### additionalComponentNames (Optional)
-
-Similar to [@formatjs/ts-transformer](https://formatjs.io/docs/tooling/ts-transformer#additionalcomponentnames), this allows you to specify additional component names to check besides `FormatMessage`.
-
 #### onUndefinedMessage (Optional)
 
 Callback function for when an string ID is encountered without a corresponding entry in the translatedMessages object. In this scenario the plugin falls back to the source language.

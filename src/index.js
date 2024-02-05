@@ -4,11 +4,6 @@ module.exports = (babel, options) => {
     return {};
   }
 
-  const additionalFunctionName = options.additionalFunctionNames || [];
-  const additionalComponentNames = options.additionalComponentNames || [];
-  const functionNames = ["formatMessage", ...additionalFunctionName];
-  const componentNames = ["FormattedMessage", ...additionalComponentNames];
-
   // Messages are expected to be an object of form {[id: string]: string | AST}
   // translatedMessages can either be an object or a path to an object
   const messages =

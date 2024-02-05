@@ -34,8 +34,6 @@ describe("babel-plugin-formatjs-localized-bundle", () => {
                   "normal",
                   "mockMessages.js"
                 )),
-                additionalComponentNames: ["LocalMsg"],
-                additionalFunctionNames: ["localize"],
               },
             ],
           ],
@@ -75,8 +73,6 @@ describe("babel-plugin-formatjs-localized-bundle", () => {
                   "normal",
                   "mockMessages.js"
                 ),
-                additionalComponentNames: ["LocalMsg"],
-                additionalFunctionNames: ["localize"],
               },
             ],
           ],
@@ -139,8 +135,6 @@ describe("babel-plugin-formatjs-localized-bundle", () => {
                   "pre-compiled",
                   "mockMessages.js"
                 )),
-                additionalComponentNames: ["LocalMsg"],
-                additionalFunctionNames: ["localize"],
               },
             ],
           ],
@@ -279,8 +273,6 @@ describe("babel-plugin-formatjs-localized-bundle", () => {
                   "pre-compiled-nextjs",
                   "mockMessages.js"
                 )),
-                additionalComponentNames: ["LocalMsg"],
-                additionalFunctionNames: ["localize"],
               },
             ],
           ],
